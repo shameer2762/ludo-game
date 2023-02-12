@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css2?family=Alike&display=swap);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Alike", serif;
+  border: 1px solid red;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right bottom,
+    white,
+    white,
+    rgba(255, 128, 225, 0.73),
+    white,
+    white
+  );
+  position: relative;
+}
+html {
+  font-size: 100%;
+}
+.main-container {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  background-size: cover;
+  margin: 3.7rem auto;
+  box-shadow: 3px 3px 15px rgb(102, 102, 102);
+  /* position: fixed; */
+}
+.sub-container {
+  display: flex;
+}
+.box {
+  height: 39.7vh;
+  width: 39.8vw;
+}
+.box-1 {
+  background-color: rgba(255, 71, 71, 0.783);
+  border: 0.1rem solid black;
+}
+.box-2 {
+  background-color: rgba(25, 204, 25, 0.676);
+  border: 0.1rem solid black;
+}
+.box-3 {
+  background-color: rgba(132, 132, 255, 0.844);
+  border: 0.1rem solid black;
+}
+.box-4 {
+  background-color: rgba(255, 255, 0, 0.806);
+  border: 0.1rem solid black;
+}
+.dice {
+  position: absolute;
+  top: 37.5%;
+  left: 42.5%;
+  height: 25vh;
+  width: 15vw;
+  box-shadow: 1px 1px 10px grey;
+}
