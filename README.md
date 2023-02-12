@@ -22,8 +22,7 @@ To get started with playing the game, follow these steps:
 
 ### Flow chart of each step
 
-![image](https://user-images.githubusercontent.com/99794143/218320904-5929e433-969d-45af-bf63-ef288de00ecd.png)
-
+![image](https://user-images.githubusercontent.com/99794143/218321355-48bec658-c483-4286-b7f8-866e221df73c.png)
 
 ### UI design for the game
 
