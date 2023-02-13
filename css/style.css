@@ -86,8 +86,14 @@ html {
   box-shadow: 1px 1px 10px rgb(131, 131, 131);
   /* display: none; */
 }
-.roll-dice,
-.hold {
+.roll-dice-1,
+.roll-dice-2,
+.roll-dice-3,
+.roll-dice-4,
+.hold-1,
+.hold-2,
+.hold-3,
+.hold-4 {
   padding: 0.6rem;
   background-color: rgb(255, 24, 243);
   width: 8rem;
@@ -97,7 +103,10 @@ html {
   /* display: none; */
   /* border: none; */
 }
-.hold {
+.hold-1,
+.hold-2,
+.hold-3,
+.hold-4 {
   margin-top: 0;
 }
 .dice-icon,
@@ -199,4 +208,30 @@ html {
 }
 .player--4-hidden {
   margin-bottom: 1rem;
+}
+
+.hide {
+  display: none;
+}
+.reset {
+  position: absolute;
+  top: 0.5rem;
+  left: 43%;
+  /* cursor: pointer; */
+}
+.new-game {
+  padding: 0.5rem 2rem;
+  background-color: blanchedalmond;
+  font-size: larger;
+  cursor: pointer;
+}
+.body {
+  background-color: greenyellow;
+  height: 100vh;
+  width: 100vw;
+}
+.player--winning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

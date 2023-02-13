@@ -11,13 +11,16 @@
   <link rel="shortcut icon" href="https://img.freepik.com/free-vector/vector-set-different-red-black-blue-green-dice-isolated-white-background_1284-48502.jpg?w=740&t=st=1676217374~exp=1676217974~hmac=b99d75e373628b8b7beb3c9cd22d27eed29a0e63ef172b69d6ea767ec0ec24fb" >
 </head>
 <body>
-
+  <div class="complete-container">
+  <div class="reset">
+    <button class="new-game"><i class="fas fa-sync-alt"></i> New Game</button>
+  </div>
   <div class="main-container">
     <div class="sub-container">
       <div class="box box-2">
         <div class="hidden-2">
-          <button class="roll-dice"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
-          <button class="hold"><i class="fas fa-download hold-icon"></i>Hold</button>
+          <button class="roll-dice-2"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
+          <button class="hold-2"><i class="fas fa-download hold-icon"></i>Hold</button>
         </div>
         <div class="current--2">
           <h3>Current</h3>
@@ -30,12 +33,12 @@
       </div>
       <div class="box box-3">
         <div class="hidden-3">
-          <button class="roll-dice"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
-          <button class="hold"><i class="fas fa-download hold-icon"></i>Hold</button>
+          <button class="roll-dice-3"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
+          <button class="hold-3"><i class="fas fa-download hold-icon"></i>Hold</button>
         </div>
         <div class="current--3">
           <h3>Current</h3>
-          <p class="current--3-score">10</p>
+          <p class="current--3-score">0</p>
         </div>
         <div class="player--3">
           <p class="player--3-heading">Player-3</p>
@@ -54,8 +57,8 @@
           <p class="current--1-score">0</p>
         </div>
         <div class="hidden-1">
-          <button class="roll-dice"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
-          <button class="hold"><i class="fas fa-download hold-icon"></i>Hold</button>
+          <button class="roll-dice-1"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
+          <button class="hold-1"><i class="fas fa-download hold-icon"></i>Hold</button>
         </div>
         
       </div>
@@ -69,8 +72,8 @@
           <p class="current--4-score">0</p>
         </div>
         <div class="hidden-4">
-          <button class="roll-dice"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
-          <button class="hold"><i class="fas fa-download hold-icon"></i>Hold</button>
+          <button class="roll-dice-4"><i class="fas fa-dice dice-icon"></i>Roll dice</button>
+          <button class="hold-4"><i class="fas fa-download hold-icon"></i>Hold</button>
         </div>
         
       </div>
@@ -78,7 +81,10 @@
   </div>
   <img src="./img/dice-6.png" alt="image not found" class="dice">
   
-
-  <script src="./js/script.js"></script>
+  <div class="player-winning hide">
+    <h1>Player-1 is the winner</h1>
+  </div>
+</div>
+<script src="./js/script.js"></script>
 </body>
 </html>
