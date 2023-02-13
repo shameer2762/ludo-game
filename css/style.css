@@ -40,22 +40,42 @@ html {
 .box {
   height: 39.7vh;
   width: 39.8vw;
-}
-.box-1 {
-  background-color: rgba(255, 71, 71, 0.783);
-  border: 0.1rem solid black;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: end; */
 }
 .box-2 {
-  background-color: rgba(25, 204, 25, 0.676);
+  background-color: rgba(255, 71, 71, 0.783);
   border: 0.1rem solid black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 .box-3 {
-  background-color: rgba(132, 132, 255, 0.844);
+  background-color: rgba(25, 204, 25, 0.676);
   border: 0.1rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  overflow: hidden;
+}
+.box-1 {
+  background-color: rgba(126, 126, 255, 0.701);
+  border: 0.1rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  /* overflow: hidden; */
 }
 .box-4 {
   background-color: rgba(255, 255, 0, 0.806);
   border: 0.1rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  overflow: hidden;
 }
 .dice {
   position: absolute;
@@ -63,5 +83,120 @@ html {
   left: 42.5%;
   height: 25vh;
   width: 15vw;
-  box-shadow: 1px 1px 10px grey;
+  box-shadow: 1px 1px 10px rgb(131, 131, 131);
+  /* display: none; */
+}
+.roll-dice,
+.hold {
+  padding: 0.6rem;
+  background-color: rgb(255, 24, 243);
+  width: 8rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  /* display: none; */
+  /* border: none; */
+}
+.hold {
+  margin-top: 0;
+}
+.dice-icon,
+.hold-icon {
+  color: white;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  /* border: 0.01rem solid black; */
+}
+
+.current--1,
+.current--2,
+.current--3,
+.current--4 {
+  background-color: white;
+  width: 6rem;
+  margin: 0.5rem;
+  text-align: center;
+  border-radius: 5rem;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.current-score--2 {
+  /* margin-top: 0; */
+  font-size: 1.1rem;
+}
+/* .scores {
+  display: flex;
+} */
+.player--2 {
+  margin-left: 3rem;
+  margin-top: -7.4rem;
+  text-align: center;
+}
+.player--2-heading,
+.player--3-heading,
+.player--1-heading,
+.player--4-heading {
+  font-size: 1.5rem;
+}
+.player--2-score,
+.player--3-score,
+.player--1-score,
+.player--4-score {
+  font-size: 3rem;
+}
+
+.player--3 {
+  margin-top: -7rem;
+  margin-right: 16rem;
+  text-align: center;
+}
+
+.player--1 {
+  margin-left: 3rem;
+  margin-bottom: -7rem;
+  text-align: center;
+}
+.player--4 {
+  margin-bottom: -7rem;
+  margin-right: 16rem;
+  text-align: center;
+}
+
+/* classes for hiding player-1 content  */
+
+.roll-and-hold-1,
+.current--1-hidden {
+  display: none;
+}
+.player--1-hidden {
+  margin-bottom: 0;
+}
+
+/* classes for hiding player-2 content  */
+
+.roll-and-hold-2,
+.current--2-hidden {
+  display: none;
+}
+.player--2-hidden {
+  margin-top: 3rem;
+}
+
+/* classes for hiding player-3 content  */
+
+.roll-and-hold-3,
+.current--3-hidden {
+  display: none;
+}
+.player--3-hidden {
+  margin-top: 3rem;
+}
+
+/* classes for for hiding player-4 content  */
+
+.roll-and-hold-4,
+.current--4-hidden {
+  display: none;
+}
+.player--4-hidden {
+  margin-bottom: 1rem;
 }
