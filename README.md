@@ -26,7 +26,8 @@ To get started with playing the game, follow these steps:
 
 ### UI design for the game
 
-![image](https://user-images.githubusercontent.com/99794143/218319642-8c11e450-d4cd-4e94-9b8a-c02fd05f0872.png)
+![image](https://user-images.githubusercontent.com/99794143/218393382-e2891964-78b1-4771-82fe-3e4e8d19397a.png)
+
 
 ### How to play the game
 
