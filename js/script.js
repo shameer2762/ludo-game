@@ -29,9 +29,37 @@ const rollDice3El = document.querySelector('.roll-dice-3')
 const rollDice4El = document.querySelector('.roll-dice-4')
 
 let activePlayer = 1
+const winHeading = document.createElement('h1')
+winHeading.textContent = 'You Win!🎉'
+
+const winText = function () {
+  console.log(activePlayer)
+  if (activePlayer === 1) {
+    winHeading.classList.add('win-class-1')
+    document.querySelector(`.player--1`).appendChild(winHeading)
+    winHeading.classList.remove('hide')
+  } else if (activePlayer === 2) {
+    winHeading.classList.add('win-class-2')
+    document.querySelector(`.player--2`).appendChild(winHeading)
+    winHeading.classList.remove('hide')
+  } else if (activePlayer === 3) {
+    winHeading.classList.add('win-class-3')
+    document.querySelector(`.player--3`).appendChild(winHeading)
+    winHeading.classList.remove('hide')
+  } else if (activePlayer === 4) {
+    winHeading.classList.add('win-class-4')
+    document.querySelector(`.player--4`).appendChild(winHeading)
+    winHeading.classList.remove('hide')
+  }
+}
 
 const init = function () {
   activePlayer = 1
+  currentScore1El.textContent = 0
+  currentScore2El.textContent = 0
+  currentScore3El.textContent = 0
+  currentScore4El.textContent = 0
+
   diceEl.classList.add('hide')
 
   hidden1El.classList.remove('roll-and-hold-1')
@@ -46,9 +74,12 @@ const init = function () {
   current3El.classList.add('current--3-hidden')
   player3El.classList.add('player--3-hidden')
 
+  console.log(activePlayer)
+
   hidden4El.classList.add('roll-and-hold-4')
   current4El.classList.add('current--4-hidden')
   player4El.classList.add('player--4-hidden')
+  winHeading.classList.add('hide')
 }
 
 // init()
@@ -56,6 +87,47 @@ const init = function () {
 
 resetEl.addEventListener('click', function () {
   init()
+
+  console.log(activePlayer)
+  // if(activePlayer===1){
+
+  // }
+
+  player1ScoreEl.textContent = 0
+  player2ScoreEl.textContent = 0
+  player3ScoreEl.textContent = 0
+  player4ScoreEl.textContent = 0
+
+  document.querySelector('.box-1').classList.remove('win')
+  document.querySelector('.box-2').classList.remove('win')
+  document.querySelector('.box-3').classList.remove('win')
+  document.querySelector('.box-4').classList.remove('win')
+
+  player1Heading.classList.remove('hide')
+  player1ScoreEl.classList.remove('hide')
+
+  player2Heading.classList.remove('hide')
+  player2ScoreEl.classList.remove('hide')
+
+  player3Heading.classList.remove('hide')
+  player3ScoreEl.classList.remove('hide')
+
+  player4Heading.classList.remove('hide')
+  player4ScoreEl.classList.remove('hide')
+
+  winHeading.classList.remove('win-class-1')
+  document.querySelector(`.player--1`).removeChild(winHeading)
+
+  winHeading.classList.remove('win-class-2')
+  document.querySelector(`.player--2`).removeChild(winHeading)
+
+  winHeading.classList.remove('win-class-3')
+  document.querySelector(`.player--3`).removeChild(winHeading)
+
+  winHeading.classList.remove('win-class-4')
+  document.querySelector(`.player--4`).removeChild(winHeading)
+
+  // winHeading.classList.remove('hide')
 })
 
 // Rolling dice & switching to new player if dice rolls as 1 functionality
@@ -167,7 +239,7 @@ const generateRandomAndDisplay = function (activePlayer) {
 }
 
 rollDice1El.addEventListener('click', function () {
-  init()
+  // init()
   activePlayer = 1
   generateRandomAndDisplay(activePlayer)
 })
@@ -188,6 +260,10 @@ rollDice4El.addEventListener('click', function () {
 })
 
 // Holding current score to total score
+const player1Heading = document.querySelector('.player--1-heading')
+const player2Heading = document.querySelector('.player--2-heading')
+const player3Heading = document.querySelector('.player--3-heading')
+const player4Heading = document.querySelector('.player--4-heading')
 
 const player1ScoreEl = document.querySelector('.player--1-score')
 const player2ScoreEl = document.querySelector('.player--2-score')
@@ -209,11 +285,12 @@ hold1El.addEventListener('click', function () {
     Number(player1ScoreEl.textContent) + Number(currentScore1El.textContent)
   if (Number(player1ScoreEl.textContent) >= 10) {
     hideAllEl()
-    completeContainerEl.classList.add('hide')
-    bodyEl.classList.add('body')
-    playerWinningEl.classList.remove('hide')
+    document.querySelector('.box-1').classList.add('win')
+    // player2El.classList.add('win')
+    player1Heading.classList.add('hide')
+    player1ScoreEl.classList.add('hide')
+    winText()
   } else {
-    currentScore1El.textContent = 0
     hideAllEl()
     showPlayer2El()
   }
@@ -222,20 +299,48 @@ hold2El.addEventListener('click', function () {
   player2ScoreEl.textContent =
     Number(player2ScoreEl.textContent) + Number(currentScore2El.textContent)
   currentScore2El.textContent = 0
-  hideAllEl()
-  showPlayer3El()
+  if (Number(player2ScoreEl.textContent) >= 10) {
+    hideAllEl()
+    document.querySelector('.box-2').classList.add('win')
+    player2Heading.classList.add('hide')
+    player2ScoreEl.classList.add('hide')
+    winText()
+  } else {
+    hideAllEl()
+    showPlayer3El()
+  }
 })
 hold3El.addEventListener('click', function () {
   player3ScoreEl.textContent =
     Number(player3ScoreEl.textContent) + Number(currentScore3El.textContent)
   currentScore3El.textContent = 0
-  hideAllEl()
-  showPlayer4El()
+  if (Number(player3ScoreEl.textContent) >= 10) {
+    hideAllEl()
+    document.querySelector('.box-3').classList.add('win')
+    player3Heading.classList.add('hide')
+    player3ScoreEl.classList.add('hide')
+    winText()
+  } else {
+    hideAllEl()
+    showPlayer4El()
+  }
 })
 hold4El.addEventListener('click', function () {
+  console.log(activePlayer)
+
   player4ScoreEl.textContent =
     Number(player4ScoreEl.textContent) + Number(currentScore4El.textContent)
   currentScore4El.textContent = 0
-  hideAllEl()
-  showPlayer1El()
+  if (Number(player4ScoreEl.textContent) >= 10) {
+    console.log(activePlayer)
+
+    hideAllEl()
+    document.querySelector('.box-4').classList.add('win')
+    player4Heading.classList.add('hide')
+    player4ScoreEl.classList.add('hide')
+    winText()
+  } else {
+    hideAllEl()
+    showPlayer1El()
+  }
 })

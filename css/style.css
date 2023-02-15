@@ -6,14 +6,15 @@ body {
   font-family: "Alike", serif;
   border: 1px solid red;
   box-sizing: border-box;
-  background-image: linear-gradient(
+  background-color: white;
+  /* background-image: linear-gradient( 
     to right bottom,
     white,
     white,
     rgba(255, 128, 225, 0.73),
     white,
     white
-  );
+  ); */
   position: relative;
 }
 html {
@@ -46,14 +47,14 @@ html {
 }
 .box-2 {
   background-color: rgba(255, 71, 71, 0.783);
-  border: 0.1rem solid black;
+  border: 0.1rem solid rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .box-3 {
   background-color: rgba(25, 204, 25, 0.676);
-  border: 0.1rem solid black;
+  border: 0.1rem solid rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -62,15 +63,15 @@ html {
 }
 .box-1 {
   background-color: rgba(126, 126, 255, 0.701);
-  border: 0.1rem solid black;
+  border: 0.1rem solid rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .box-4 {
   background-color: rgba(255, 255, 0, 0.806);
-  border: 0.1rem solid black;
+  border: 0.1rem solid rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -95,13 +96,13 @@ html {
 .hold-3,
 .hold-4 {
   padding: 0.6rem;
-  background-color: rgb(255, 24, 243);
+  background-color: rgb(255, 93, 247);
   width: 8rem;
   color: white;
   font-size: 1rem;
   cursor: pointer;
   /* display: none; */
-  /* border: none; */
+  border: 0.1rem solid rgba(15, 4, 4, 0.475);
 }
 .hold-1,
 .hold-2,
@@ -221,9 +222,10 @@ html {
 }
 .new-game {
   padding: 0.5rem 2rem;
-  background-color: blanchedalmond;
+  background-color: rgba(255, 255, 255, 0.207);
   font-size: larger;
   cursor: pointer;
+  border-radius: 5rem;
 }
 .body {
   background-color: greenyellow;
@@ -234,4 +236,36 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.win {
+  background-color: rgb(39, 39, 39);
+}
+.win-class-1 {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin-bottom: 7rem;
+  margin-left: -7rem;
+  color: white;
+}
+.win-class-2 {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-top: 3rem;
+  margin-left: -7rem;
+  color: white;
+}
+.win-class-3 {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: white;
+  margin-right: -7rem;
+  margin-top: 3rem;
+}
+.win-class-4 {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: white;
+  margin-right: -7rem;
+  margin-bottom: 6rem;
 }
