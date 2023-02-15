@@ -6,15 +6,15 @@ body {
   font-family: "Alike", serif;
   border: 1px solid red;
   box-sizing: border-box;
-  background-color: white;
-  /* background-image: linear-gradient( 
+  /* background-color: white; */
+  background-image: linear-gradient(
     to right bottom,
     white,
     white,
     rgba(255, 128, 225, 0.73),
     white,
     white
-  ); */
+  );
   position: relative;
 }
 html {
@@ -162,11 +162,11 @@ html {
 
 .player--1 {
   margin-left: 3rem;
-  margin-bottom: -7rem;
+  margin-bottom: -8.5rem;
   text-align: center;
 }
 .player--4 {
-  margin-bottom: -7rem;
+  margin-bottom: -9rem;
   margin-right: 16rem;
   text-align: center;
 }
