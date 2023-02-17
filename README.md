@@ -14,6 +14,10 @@ To get started with playing the game, follow these steps:
 2. open index.html file in your browser.
 3. Enjoy playing Ludo with your friends or family!
 
+OR 
+
+just click on this URL and enjoy the game! : https://2762.000webhostapp.com/ludo_game/index.html
+
 ## Technologies used
 
 1. HTML5 - to structure the page.
