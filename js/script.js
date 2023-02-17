@@ -276,14 +276,14 @@ const hold3El = document.querySelector('.hold-3')
 const hold4El = document.querySelector('.hold-4')
 
 const bodyEl = document.querySelector('body')
-console.log(bodyEl)
+// console.log(bodyEl)
 const playerWinningEl = document.querySelector('.player-winning')
-const completeContainerEl = document.querySelector('complete-container')
+// const completeContainerEl = document.querySelector('.complete-container')
 
 hold1El.addEventListener('click', function () {
   player1ScoreEl.textContent =
     Number(player1ScoreEl.textContent) + Number(currentScore1El.textContent)
-  if (Number(player1ScoreEl.textContent) >= 10) {
+  if (Number(player1ScoreEl.textContent) >= 100) {
     hideAllEl()
     document.querySelector('.box-1').classList.add('win')
     // player2El.classList.add('win')
@@ -293,13 +293,14 @@ hold1El.addEventListener('click', function () {
   } else {
     hideAllEl()
     showPlayer2El()
+    currentScore1El.textContent = 0
   }
 })
 hold2El.addEventListener('click', function () {
   player2ScoreEl.textContent =
     Number(player2ScoreEl.textContent) + Number(currentScore2El.textContent)
-  currentScore2El.textContent = 0
-  if (Number(player2ScoreEl.textContent) >= 10) {
+
+  if (Number(player2ScoreEl.textContent) >= 100) {
     hideAllEl()
     document.querySelector('.box-2').classList.add('win')
     player2Heading.classList.add('hide')
@@ -308,13 +309,14 @@ hold2El.addEventListener('click', function () {
   } else {
     hideAllEl()
     showPlayer3El()
+    currentScore2El.textContent = 0
   }
 })
 hold3El.addEventListener('click', function () {
   player3ScoreEl.textContent =
     Number(player3ScoreEl.textContent) + Number(currentScore3El.textContent)
-  currentScore3El.textContent = 0
-  if (Number(player3ScoreEl.textContent) >= 10) {
+
+  if (Number(player3ScoreEl.textContent) >= 100) {
     hideAllEl()
     document.querySelector('.box-3').classList.add('win')
     player3Heading.classList.add('hide')
@@ -323,15 +325,15 @@ hold3El.addEventListener('click', function () {
   } else {
     hideAllEl()
     showPlayer4El()
+    currentScore3El.textContent = 0
   }
 })
 hold4El.addEventListener('click', function () {
-  console.log(activePlayer)
+  // console.log(activePlayer)
 
   player4ScoreEl.textContent =
     Number(player4ScoreEl.textContent) + Number(currentScore4El.textContent)
-  currentScore4El.textContent = 0
-  if (Number(player4ScoreEl.textContent) >= 10) {
+  if (Number(player4ScoreEl.textContent) >= 100) {
     console.log(activePlayer)
 
     hideAllEl()
@@ -342,5 +344,6 @@ hold4El.addEventListener('click', function () {
   } else {
     hideAllEl()
     showPlayer1El()
+    currentScore4El.textContent = 0
   }
 })
