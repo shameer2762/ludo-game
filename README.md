@@ -18,6 +18,8 @@ OR
 
 just click on this URL and enjoy the game! : https://2762.000webhostapp.com/ludo_game/index.html
 
+Open in desktop for best experience.
+
 ## Technologies used
 
 1. HTML5 - to structure the page.
